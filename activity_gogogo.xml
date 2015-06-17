@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res/com.juanliuinformation.lvningmeng"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dimen_border_size_llarge"
+        android:layout_alignParentTop="true"
+        android:background="@color/org_background_grey" >
+
+        <LinearLayout
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:paddingLeft="@dimen/dimen_border_size_normal"
+            android:paddingRight="@dimen/dimen_border_size_normal"
+            android:gravity="center_vertical">
+            
+         <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"   
+            android:src="@drawable/ic_back_left" />
+        </LinearLayout>
+        
+
+
+        <RadioGroup
+            android:id="@+id/rg_time_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/today_selector"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rb_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/week_selector"
+                android:checked="false" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_title"
+        android:layout_marginTop="@dimen/dimen_border_size_xnormal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/dimen_border_size_large"
+            android:orientation="vertical"
+            android:layout_centerVertical="true" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="@string/kilometer"
+                android:textColor="#6F6F6F"
+                android:textSize="@dimen/dimen_font_size_xnormal" />
+
+            <TextView
+                android:id="@+id/tv_kilo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="6.6"
+                android:textColor="#52BCBC"
+                android:textSize="@dimen/dimen_font_size_llarge" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="@string/calorie"
+                android:textColor="#6F6F6F"
+                android:textSize="@dimen/dimen_font_size_xnormal" />
+
+            <TextView
+                android:id="@+id/tv_calorie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="66"
+                android:textColor="#52BCBC"
+                android:textSize="@dimen/dimen_font_size_llarge" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen_border_size_normal"
+            android:background="@drawable/corners_1"
+            android:orientation="vertical" 
+            android:padding="@dimen/indicator_internal_padding">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/rank"
+                    android:textColor="#6F6F6F"
+                    android:textSize="@dimen/dimen_font_size_xnormal" />
+                <ImageView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_gogo_rangking"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="6"
+                android:textColor="#52BCBC"
+                android:textSize="@dimen/dimen_font_size_llarge" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.hengtiansoft.tijianba.util.Playgroundbar
+        android:id="@+id/pgb"
+        android:layout_width="fill_parent"
+        android:layout_height="200dip"
+        android:layout_below="@id/layout_info"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/dimen_border_size_xnormal"
+        android:layout_marginRight="@dimen/dimen_border_size_xnormal"
+        android:layout_marginTop="@dimen/dimen_border_size_large"
+        android_custom:delta="2dp"
+        android_custom:roundColor="#D1D1D1"
+        android_custom:roundProgressColor="#F2572D"
+        android_custom:roundWidth="8dip"
+        android_custom:textColor="#A3A3A3"
+        android_custom:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/layout_gap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingTop="@dimen/dimen_border_size_small"
+        android:layout_below="@id/pgb"
+        android:orientation="horizontal" >
+        <TextView
+            android:id="@+id/tv_gap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_double_foot"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:drawablePadding="@dimen/dimen_border_size_small"
+            android:text="@string/gap"
+            android:textSize="@dimen/dimen_font_size_lsmall"
+            android:textColor="#f2572d" />
+    </LinearLayout>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_gap"
+        android:layout_marginBottom="@dimen/dimen_border_size_small"
+        android:layout_marginLeft="@dimen/dimen_border_size_small"
+        android:layout_marginRight="@dimen/dimen_border_size_small"
+        android:layout_marginTop="@dimen/dimen_chart"
+        android:paddingBottom="@dimen/indicator_right_padding" />
+
+</RelativeLayout>
